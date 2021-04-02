@@ -2,9 +2,15 @@
 
 $primary-blue: #0077b6;
 $secondary-blue: #caf0f8;
-$light-blue: #90E0EF;
+$light-blue: #90e0ef;
 $dark-blue: #03045e;
 
+@mixin flex-it($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
 
 * {
   margin: 0;
@@ -21,7 +27,7 @@ html {
 body {
   position: relative;
   background-color: $secondary-blue;
-  
+
   .google-play-btn {
     margin-left: -10px;
     transition: all 0.3s ease-in-out;
@@ -30,7 +36,6 @@ body {
   .google-play-btn:hover {
     transform: translateY(-5px);
   }
-
 }
 
 main {
@@ -49,9 +54,10 @@ header {
   z-index: 100;
 
   .branding {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-it(row);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     padding-left: 30px;
   }
 
@@ -75,7 +81,7 @@ header {
         transition: all 0.3s ease-in-out;
         a {
           text-decoration: none;
-          font-size: 1.5rem;
+          font-size: 1.8rem;
           font-weight: 400;
           color: $dark-blue;
         }
@@ -95,9 +101,7 @@ header {
   background-color: $primary-blue;
   border-bottom-right-radius: 200px;
   transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-it(row);
   &::after {
     content: "";
     position: absolute;
@@ -224,11 +228,8 @@ header {
   padding-top: 20px;
   padding-bottom: 100px;
   background-color: $primary-blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  h2{ 
+  @include flex-it(column);
+  h2 {
     font-size: 4rem;
     font-weight: 600;
     color: $dark-blue;
@@ -238,11 +239,11 @@ header {
     font-weight: 300;
     color: $dark-blue;
     padding-bottom: 20px;
-    }
+  }
 }
 
 // Contact section
-#contact{
+#contact {
   background-color: $primary-blue;
   background-size: cover;
   width: 100vw;
@@ -250,14 +251,14 @@ header {
   padding: 40px 0;
 }
 
-#contact h2{
+#contact h2 {
   text-align: center;
   color: $dark-blue;
   font-weight: 700;
   font-size: 3rem;
 }
 
-.contact-form{
+.contact-form {
   max-width: 600px;
   margin: auto;
   padding: 0 10px;
@@ -265,7 +266,7 @@ header {
   text-align: center;
 }
 
-.contact-form-text{
+.contact-form-text {
   font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   width: 100%;
@@ -280,11 +281,11 @@ header {
   transition: 0.5s;
 }
 
-.contact-form-text:focus{
+.contact-form-text:focus {
   box-shadow: 0 0 12px 1px $dark-blue;
 }
 
-textarea.contact-form-text{
+textarea.contact-form-text {
   resize: none;
   height: 160px;
 }
@@ -293,7 +294,7 @@ textarea.contact-form-text{
   color: $dark-blue;
 }
 
-.contact-form-btn{
+.contact-form-btn {
   font-family: "Poppins", sans-serif;
   border: 0;
   font-size: 2rem;
@@ -305,6 +306,36 @@ textarea.contact-form-text{
   transition: 0.5s;
   outline: none;
 }
-.contact-form-btn:hover{
+
+.contact-form-btn:hover {
   background: #00b4d8;
+}
+
+#partners {
+  padding-top: 50px;
+  text-align: center;
+  .logos {
+    @include flex-it(row);
+    img {
+      margin: 0 20px;
+    }
+  }
+  h2 {
+    font-size: 2.6rem;
+    color: $dark-blue;
+  }
+}
+
+footer {
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  background-color: $dark-blue;
+  color: $secondary-blue;
+  @include flex-it(column);
+  p {
+    a {
+      text-decoration: none;
+      color: $primary-blue;
+    }
+  }
 }
