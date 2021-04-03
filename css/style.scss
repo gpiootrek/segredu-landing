@@ -5,6 +5,13 @@ $secondary-blue: #caf0f8;
 $light-blue: #90e0ef;
 $dark-blue: #03045e;
 
+// breakpoint variables
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 481px;
+$breakpoint-sm-screen: 769px;
+$breakpoint-md-screen: 1025px;
+$breakpoint-lg-screen: 1201px;
+
 @mixin flex-it($direction) {
   display: flex;
   justify-content: center;
@@ -127,17 +134,6 @@ header {
     opacity: 0.2;
     border-bottom-right-radius: 200px;
   }
-  .abs-segredu {
-    position: absolute;
-    top: 100px;
-    left: 10%;
-    font-size: 10rem;
-    font-weight: 600;
-    color: transparent;
-    -webkit-text-stroke: 2px $dark-blue;
-    opacity: 0.3;
-    mix-blend-mode: soft-light;
-  }
 }
 
 // text and mockup content divs
@@ -200,8 +196,8 @@ header {
   .func,
   .func-2 {
     display: flex;
-    justify-content: space-around;
-    width: 70vw;
+    justify-content: space-evenly;
+    padding: 0 10vw;
     margin: 0 auto;
     height: 45vh;
     margin-top: 50px;
@@ -215,7 +211,6 @@ header {
       width: auto;
       display: flex;
       justify-content: center;
-      padding-right: 100px;
       h2 {
         font-size: 4rem;
         font-weight: 600;
@@ -224,12 +219,6 @@ header {
       p {
         font-size: 2rem;
       }
-    }
-  }
-  // change padding from right to left
-  .func-2 {
-    .section-text-content {
-      padding-left: 100px;
     }
   }
 }
@@ -292,6 +281,9 @@ header {
   outline: none;
   color: #111;
   transition: 0.5s;
+  &:focus {
+    background: #0085cc;
+  }
 }
 
 .contact-form-text:focus {
@@ -350,5 +342,162 @@ footer {
       text-decoration: none;
       color: $primary-blue;
     }
+  }
+}
+
+@media screen and (min-width: $breakpoint-md-screen) and (max-width: $breakpoint-lg-screen - 1) {
+  #hero {
+    height: 95vh;
+  }
+  .section-text-content {
+    width: 50vw;
+  }
+  #about {
+    .func,
+    .func-2 {
+      padding: 0 5vw;
+    }
+  }
+  #download {
+    iframe {
+      width: 960px;
+      height: 540px;
+    }
+  }
+  #partners {
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-sm-screen) and (max-width: $breakpoint-md-screen - 1) {
+  // !!! Important !!! - no phone mockups
+
+  .section-mockup-content {
+    display: none;
+  }
+
+  #hero {
+    height: 100vh;
+    text-align: center;
+    border-bottom-right-radius: 0%;
+    &::after {
+      border-bottom-right-radius: 0%;
+    }
+  }
+
+  .section-text-content {
+    text-align: center;
+    width: 100vw;
+    p {
+      margin: 0 auto;
+    }
+    .btn-area {
+      justify-content: center;
+    }
+  }
+  #about {
+    scroll-margin-top: 20px;
+    .func,
+    .func-2 {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 10vw;
+      margin: 0 auto;
+      // height: 45vh;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  #download {
+    iframe {
+      width: 720px;
+      height: 480px;
+    }
+  }
+  #partners {
+    img {
+      width: 100px;
+      height: auto;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md-screen - 1) {
+  // change navbar to hamburger menu
+
+  header {
+    padding: 20px 40px;
+    .branding {
+      padding-left: 0;
+    }
+    .branding .nav-logo-text {
+      display: none;
+    }
+    nav {
+      ul {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        background-color: $primary-blue;
+        @include flex-it(column);
+        justify-content: space-evenly;
+        // Take menu off the screen
+        transform: translateX(100%);
+        transition: transform 0.4s ease-out;
+        li {
+          opacity: 0;
+          a {
+            font-size: 2.4rem;
+          }
+        }
+      }
+
+      .hamburger-menu {
+        z-index: 5;
+        display: block;
+        cursor: pointer;
+        div {
+          width: 40px;
+          height: 4px;
+          background-color: #fff;
+          margin: 10px;
+          transition: all .4s ease;
+        }
+      }
+    }
+  }
+}
+
+.active-hamburger {
+  transform: translateX(0%);
+}
+
+@keyframes navFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle {
+  .line1{
+    transform: rotate(-45deg) translate(-9px, 10px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3{
+    transform: rotate(45deg) translate(-9px, -10px);
   }
 }
