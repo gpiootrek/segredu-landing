@@ -13,19 +13,19 @@
   </head>
   <body>
     <!-- HEADER with NAVIGATION -->
-    <header>
-      <div class="branding">
+    <header class="header">
+      <a class="branding to-top" href="#hero">
         <img
-          src="/images/ig.png"
+          src="/images/logo.png"
           width="50"
           height="50"
           alt=""
           class="nav-logo"
         />
-        <a class="nav-logo-text" href="#hero">Segredu</a>
-      </div>
-      <nav>
-        <ul>
+        <span class="nav-logo-text">Segredu</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-links">
           <li><a href="#about" class="nav-link">O aplikacji</a></li>
           <li><a href="#download" class="nav-link">Pobierz</a></li>
           <li><a href="#contact" class="nav-link">Kontakt</a></li>
@@ -36,20 +36,24 @@
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
+        <div class="burger-close"></div>
       </nav>
     </header>
     <main>
       <!-- HERO SECTION -->
       <section id="hero">
         <div class="section-text-content">
-          <h1>Segredu</h1>
-          <p>Segregowanie jeszcze nigdy nie było tak proste!</p>
+          <h1 class="h1">Segredu</h1>
+          <p class="desc">Segregowanie jeszcze nigdy nie było tak proste!</p>
           <div class="btn-area">
-            <a href="https://play.google.com/store/apps/details?id=com.relit.segredu" class="google-play-btn">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.relit.segredu"
+              class="google-play-btn"
+            >
               <img
-                src="/images/google-play-badge.png"
+                src="/images/google-play.png"
                 width="240"
-                height="auto"
+                height="94"
                 alt="Google play logo - pobierz z google play"
             /></a>
             <!-- <a href="" class="check-btn">SPRAWDŹ &#8594;</a> -->
@@ -61,6 +65,13 @@
       <!-- ABOUT SECTION -->
       <section id="about">
         <div class="func scanner">
+          <img
+            src="/images/func-icons/skaner.png"
+            alt="Ikona skanera"
+            class="func-icon"
+            width="192"
+            height="192"
+          />
           <div class="section-mockup-content"></div>
           <div class="section-text-content">
             <h2 class="name">Skaner</h2>
@@ -71,6 +82,13 @@
           </div>
         </div>
         <div class="func-2 search">
+          <img
+            src="/images/func-icons/lista.png"
+            alt="Ikona szukania"
+            class="func-icon"
+            width="192"
+            height="192"
+          />
           <div class="section-text-content">
             <h2 class="name">Wyszukiwarka</h2>
             <p class="desc">
@@ -81,6 +99,13 @@
           <div class="section-mockup-content"></div>
         </div>
         <div class="func schedule">
+          <img
+            src="/images/func-icons/harmonogram.png"
+            alt="Ikona harmonogramu"
+            class="func-icon"
+            width="192"
+            height="192"
+          />
           <div class="section-mockup-content"></div>
           <div class="section-text-content">
             <h2 class="name">Harmonogram</h2>
@@ -91,6 +116,13 @@
           </div>
         </div>
         <div class="func-2 map">
+          <img
+            src="/images/func-icons/mapa.png"
+            alt="Ikona mapy"
+            class="func-icon"
+            width="192"
+            height="192"
+          />
           <div class="section-text-content">
             <h2 class="name">Lista punktów</h2>
             <p class="desc">
@@ -104,16 +136,20 @@
 
       <!-- DOWNLOAD SECTION -->
       <section id="download">
-        <h2>Pobierz SEGREDU</h2>
-        <a href="https://play.google.com/store/apps/details?id=com.relit.segredu" class="google-play-btn">
+        <h2 class="download-heading">Pobierz SEGREDU</h2>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.relit.segredu"
+          class="google-play-btn"
+        >
           <img
-            src="/images/google-play-badge.png"
+            src="/images/google-play.png"
             width="240"
-            height="auto"
+            height="94"
             alt="Google play logo - pobierz z google play"
         /></a>
         <p class="info">Zobacz, jak zacząć korzystać z naszej aplikacji.</p>
         <iframe
+          class="video"
           width="1024"
           height="576"
           src="https://www.youtube.com/embed/IQj8e60USMM"
@@ -126,7 +162,7 @@
 
       <!-- CONTACT SECTION -->
       <section id="contact">
-        <h2>Skontaktuj się z nami</h2>
+        <h2 class="contact-heading">Skontaktuj się z nami</h2>
         <form class="contact-form" action="index.html" method="post">
           <input
             type="email"
@@ -143,27 +179,27 @@
 
       <!-- PARTNERS SECTION -->
       <section id="partners">
-        <h2>Aplikacja stworzona we współpracy z:</h2>
+        <h2 class="partners-heading">Aplikacja stworzona we współpracy z:</h2>
         <div class="logos">
-        <img
-            src="/images/idea.jpg"
+          <img
+            src="/images/idea.png"
             width="128"
-            height="auto"
+            height="128"
             alt="Logo Idea Kielce"
-        />
-        <img
+          />
+          <img
             src="/images/kielce.png"
             width="128"
-            height="auto"
+            height="128"
             alt="Logo Miasta Kielce"
-        />
-      </div>
+          />
+        </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-      <span>Segredu 2021</span>
+    <footer class="footer">
+      <span class="segredu-footer">Segredu 2021</span>
     </footer>
     <script src="/js/navbar.js"></script>
   </body>
