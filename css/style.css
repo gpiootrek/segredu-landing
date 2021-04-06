@@ -648,6 +648,9 @@ body .google-play-btn:hover {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   #hero {
     height: 100vh;
     width: 100vw;
@@ -664,7 +667,12 @@ body .google-play-btn:hover {
     text-align: center;
     width: 100vw;
   }
+  .section-text-content .h1 {
+    font-size: 4rem;
+  }
   .section-text-content .desc {
+    width: 90vw;
+    font-size: 1.375rem;
     margin: 0 auto;
   }
   .section-text-content .btn-area {
@@ -680,14 +688,25 @@ body .google-play-btn:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding: 0 10vw;
+    padding: 0 5vw;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  #about .feature .section-text-content .name,
+  #about .feature-2 .section-text-content .name {
+    font-size: 2rem;
+  }
+  #download .download-heading {
+    font-size: 2rem;
+  }
+  #download .info {
+    font-size: 1.375rem;
+    text-align: center;
+  }
   #download .video {
-    width: 720px;
-    height: 480px;
+    width: 100vw;
+    height: auto;
   }
   #partners img {
     width: 100px;

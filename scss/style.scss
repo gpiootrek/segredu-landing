@@ -455,6 +455,10 @@ body {
 @media screen and (max-width: $breakpoint-sm-screen - 1) {
   // TODO MOBILE DESIGN, ESPECIALLY ICONS IN ABOUT SECTION
   
+  body {
+    overflow-x: hidden;
+  }
+
   #hero {
     height: 100vh;
     width: 100vw;
@@ -463,6 +467,7 @@ body {
     &::after {
       border-bottom-right-radius: 0%;
     }
+
   }
 
   .section-mockup-content {
@@ -472,29 +477,47 @@ body {
   .section-text-content {
     text-align: center;
     width: 100vw;
+    .h1 {
+      font-size: $font-xlg;
+    }
     .desc {
+      width: 90vw;
+      font-size: $font-sm;
       margin: 0 auto;
     }
     .btn-area {
       justify-content: center;
     }
   }
+
   #about {
+    // scroll-margin-top: 5px;
     .feature,
     .feature-2 {
       display: flex;
       justify-content: space-evenly;
-      padding: 0 10vw;
+      padding: 0 5vw;
       margin: 0 auto;
-      // height: 45vh;
       margin-top: 50px;
       margin-bottom: 50px;
+      .section-text-content {
+        .name {
+          font-size: $font-md;
+        }
+      }
     }
   }
   #download {
+    .download-heading {
+      font-size: $font-md;
+    }
+    .info {
+      font-size: $font-sm;
+      text-align: center;
+    }
     .video {
-      width: 720px;
-      height: 480px;
+      width: 100vw;
+      height: auto;
     }
   }
   #partners {
