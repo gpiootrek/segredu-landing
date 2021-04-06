@@ -1,43 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-// TODO move all variables to other file
-$primary-blue: #0077b6;
-$secondary-blue: #caf0f8;
-$light-blue: #90e0ef;
-$dark-blue: #03045e;
-// breakpoint variables
-$breakpoint-mobile: 320px;
-$breakpoint-tablet: 481px;
-$breakpoint-sm-screen: 769px;
-$breakpoint-md-screen: 1025px;
-$breakpoint-lg-screen: 1201px;
-
-// TODO separate code to more files to so that it can be easier to read and manage
-
-// TODO change selectors to class or id not by elements
-@mixin flex-it($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+@import "globals";
+@import "variables";
+@import "mixins";
+@import "animations";
 
 body {
-  position: relative;
   background-color: $secondary-blue;
-
   .google-play-btn {
     margin-left: -10px;
     transition: all 0.3s ease-in-out;
@@ -46,10 +15,6 @@ body {
   .google-play-btn:hover {
     transform: translateY(-5px);
   }
-}
-
-main {
-  height: fit-content;
 }
 
 // Header - navigation
@@ -78,7 +43,7 @@ main {
   }
 
   .branding .nav-logo-text {
-    font-size: 1.8rem;
+    font-size: $font-md;
     color: $secondary-blue;
     padding-left: 10px;
     transition: all 0.4s ease-in-out;
@@ -101,7 +66,7 @@ main {
         transition: all 0.3s ease-in-out;
         .nav-link {
           text-decoration: none;
-          font-size: 1.8rem;
+          font-size: $font-md;
           font-weight: 400;
           color: #fff;
         }
@@ -146,13 +111,13 @@ main {
   display: flex;
   flex-direction: column;
   .h1 {
-    font-size: 5rem;
+    font-size: $font-h1;
     font-weight: 600;
     color: $light-blue;
   }
 
   .desc {
-    font-size: 2rem;
+    font-size: $font-md;
     width: 460px;
     color: $dark-blue;
   }
@@ -170,7 +135,7 @@ main {
       color: $secondary-blue;
       text-decoration: none;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: $font-sm;
       padding-top: 12px;
       transform: translateY(-3px);
       &:hover {
@@ -196,8 +161,8 @@ main {
   height: fit-content;
   background-color: $secondary-blue;
   border-bottom-left-radius: 200px;
-  .func,
-  .func-2 {
+  .feature,
+  .feature-2 {
     display: flex;
     justify-content: space-evenly;
     padding: 0 10vw;
@@ -206,7 +171,7 @@ main {
     margin-top: 50px;
     margin-bottom: 200px;
 
-    .func-icon {
+    .feature-icon {
       display: none;
     }
 
@@ -220,7 +185,7 @@ main {
       display: flex;
       justify-content: center;
       .name {
-        font-size: 4rem;
+        font-size: $font-xlg;
         font-weight: 600;
         color: $primary-blue;
       }
@@ -237,12 +202,12 @@ main {
   background-color: $primary-blue;
   @include flex-it(column);
   .download-heading {
-    font-size: 4rem;
+    font-size: $font-xlg;
     font-weight: 600;
     color: $dark-blue;
   }
   .info {
-    font-size: 2rem;
+    font-size: $font-md;
     font-weight: 300;
     color: $dark-blue;
     padding-bottom: 20px;
@@ -260,8 +225,8 @@ main {
   .contact-heading {
     text-align: center;
     color: $dark-blue;
-    font-weight: 700;
-    font-size: 3rem;
+    font-weight: 600;
+    font-size: $font-lg;
   }
 
   .contact-form {
@@ -274,7 +239,7 @@ main {
 
   .contact-form-text {
     font-family: "Poppins", sans-serif;
-    font-size: 1.3rem;
+    font-size: $font-sm;
     width: 100%;
     margin: 16px 0;
     border: 0;
@@ -302,7 +267,7 @@ main {
   .contact-form-btn {
     font-family: "Poppins", sans-serif;
     border: 0;
-    font-size: 2rem;
+    font-size: $font-md;
     background: $secondary-blue;
     color: #111;
     padding: 12px 50px;
@@ -327,14 +292,15 @@ main {
     }
   }
   .partners-heading {
-    font-size: 2.6rem;
+    font-size: $font-lg;
+    font-weight: 600;
     color: $dark-blue;
   }
 }
 
 .footer {
   padding: 20px 30px;
-  font-size: 1.2rem;
+  font-size: $font-sm;
   background-color: $dark-blue;
   color: $secondary-blue;
   @include flex-it(column);
@@ -348,8 +314,8 @@ main {
     width: 50vw;
   }
   #about {
-    .func,
-    .func-2 {
+    .feature,
+    .feature-2 {
       padding: 0 5vw;
     }
   }
@@ -368,8 +334,6 @@ main {
 }
 
 @media screen and (min-width: $breakpoint-sm-screen) and (max-width: $breakpoint-md-screen - 1) {
-  // !!! Important !!! - no phone mockups
-
   .section-mockup-content {
     display: none;
   }
@@ -395,8 +359,8 @@ main {
   }
   #about {
     scroll-margin-top: 20px;
-    .func,
-    .func-2 {
+    .feature,
+    .feature-2 {
       display: flex;
       justify-content: space-evenly;
       padding: 0 10vw;
@@ -418,16 +382,16 @@ main {
       height: auto;
     }
     .partners-heading {
-      font-size: 2rem;
+      font-size: $font-md;
     }
   }
 }
 
+// change navbar to hamburger menu
 @media screen and (max-width: $breakpoint-md-screen - 1) {
-  
-  // change navbar to hamburger menu
   .header {
     padding: 20px 40px;
+    width: 100vw;
     .branding {
       padding-left: 0;
     }
@@ -450,7 +414,7 @@ main {
         li {
           opacity: 0;
           .nav-link {
-            font-size: 2.4rem;
+            font-size: $font-md;
           }
         }
       }
@@ -464,12 +428,14 @@ main {
         top: 0;
         width: 40vw;
         height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease-in;
       }
 
       .active-hamburger {
         transform: translateX(0%);
       }
-      
+
       .hamburger-menu {
         z-index: 5;
         display: block;
@@ -484,20 +450,116 @@ main {
       }
     }
   }
-  // EO HEADER
-  
+  #about {
+    .feature,
+    .feature-2 {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .feature-icon {
+        display: block;
+      }
+    }
+  }
 }
 
+@media screen and (max-width: $breakpoint-sm-screen - 1) {
+  // TODO MOBILE DESIGN, ESPECIALLY ICONS IN ABOUT SECTION
 
-@keyframes navFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
+  body {
+    overflow-x: hidden;
   }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
+
+  #hero {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    border-bottom-right-radius: 0%;
+    &::after {
+      border-bottom-right-radius: 0%;
+    }
   }
+
+  .section-mockup-content {
+    display: none;
+  }
+
+  .section-text-content {
+    text-align: center;
+    width: 100vw;
+    .h1 {
+      font-size: $font-xlg;
+    }
+    .desc {
+      width: 90vw;
+      font-size: $font-sm;
+      margin: 0 auto;
+    }
+    .btn-area {
+      justify-content: center;
+    }
+  }
+
+  #about {
+    .feature,
+    .feature-2 {
+      .feature-icon {
+        width: 96px;
+        height: 96px;
+      }
+      .section-text-content {
+        .name {
+          font-size: $font-md;
+        }
+      }
+    }
+  }
+  #download {
+    .download-heading {
+      font-size: $font-md;
+    }
+    .info {
+      font-size: $font-sm;
+      text-align: center;
+    }
+    .video {
+      width: 100vw;
+      height: auto;
+    }
+  }
+
+  #contact {
+    scroll-margin-top: 40px;
+    .contact-form-text {
+      margin: 8px 0;
+      padding: 12px 26px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    textarea.contact-form-text {
+      height: 20vh;
+    }
+
+    .contact-form-btn {
+      font-size: $font-sm;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 40px;
+    }
+  }
+
+  #partners {
+    img {
+      width: 100px;
+      height: auto;
+    }
+    .partners-heading {
+      font-size: $font-md;
+    }
+  }
+  // eo mobile breakpoint
 }
 
 .toggle {
