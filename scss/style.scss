@@ -466,10 +466,6 @@ body {
 @media screen and (max-width: $breakpoint-sm-screen - 1) {
   // TODO MOBILE DESIGN, ESPECIALLY ICONS IN ABOUT SECTION
 
-  body {
-    overflow-x: hidden;
-  }
-
   #hero {
     height: 100vh;
     width: 100vw;
