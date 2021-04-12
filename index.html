@@ -11,6 +11,7 @@
       name="Description"
       content="Segredu - aplikacja, z którą segregowanie stanie się łatwiejsze, a o odbiorze odpadów nie zapomnisz już nigdy!"
     />
+    <meta name="theme-color" content="#0077b6">
     <title>Segredu</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
@@ -89,7 +90,7 @@
         <div class="feature-2 search">
           <!-- TODO search icon instead of this one -->
           <img
-            src="/images/func-icons/lista.png"
+            src="/images/func-icons/szukaj.png"
             alt="Ikona szukania"
             class="feature-icon"
             width="192"
@@ -161,7 +162,7 @@
           class="video"
           width="1024"
           height="576"
-          src="https://www.youtube.com/embed/IQj8e60USMM"
+          src="https://www.youtube.com/embed/ObXC1xakvEI"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -172,14 +173,16 @@
       <!-- CONTACT SECTION -->
       <section id="contact">
         <h2 class="contact-heading">Skontaktuj się z nami</h2>
-        <form class="contact-form" action="index.html" method="post">
+        <form name="contact" class="contact-form" method="POST" data-netlify="true">
           <input
             type="email"
+            name="email"
             class="contact-form-text"
             placeholder="Twój adres e-mail"
           />
           <textarea
             class="contact-form-text"
+            name="message"
             placeholder="Twoja wiadomość"
           ></textarea>
           <input type="submit" class="contact-form-btn" value="Wyślij" />
@@ -209,6 +212,10 @@
     <!-- FOOTER -->
     <footer class="footer">
       <span class="segredu-footer">Segredu 2021</span>
+      <a href="/privacy-policy.html" class="policy-link"
+        >Polityka prywatności</a
+      >
+      <a href="https://www.freepik.com/vectors/mockup" class="mockup-att">Mockup vector created by upklyak - www.freepik.com</a>
     </footer>
     <script src="/js/navbar.js"></script>
   </body>

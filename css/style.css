@@ -45,6 +45,43 @@ body {
   }
 }
 
+#privacy-policy {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#privacy-policy .h1 {
+  width: 100%;
+  font-size: 3rem;
+}
+
+#privacy-policy .content {
+  width: 100%;
+  font-size: 1.375rem;
+  padding: 0 10vw;
+}
+
 body {
   background-color: #caf0f8;
 }
@@ -492,6 +529,25 @@ body .google-play-btn:hover {
           flex-direction: column;
 }
 
+.footer .policy-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .policy-link:hover {
+  text-decoration: underline;
+}
+
+.footer .mockup-att {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .mockup-att:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   #hero {
     height: 95vh;
@@ -693,6 +749,10 @@ body .google-play-btn:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #about .feature,
+  #about .feature-2 {
+    margin-bottom: 0;
   }
   #about .feature .feature-icon,
   #about .feature-2 .feature-icon {

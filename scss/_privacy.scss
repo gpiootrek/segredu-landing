@@ -1,0 +1,23 @@
+#privacy-policy {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  .h1 {
+    width: 100%;
+    font-size: $font-lg;
+  }
+  .content {
+    width: 100%;
+    font-size: $font-sm;
+    padding: 0 10vw;
+  }
+}
