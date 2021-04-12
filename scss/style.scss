@@ -4,6 +4,7 @@
 @import "variables";
 @import "mixins";
 @import "animations";
+@import "privacy";
 
 body {
   background-color: $secondary-blue;
@@ -281,6 +282,7 @@ body {
   }
 }
 
+// partners section
 #partners {
   padding-top: 50px;
   text-align: center;
@@ -298,12 +300,28 @@ body {
   }
 }
 
+// footer
 .footer {
   padding: 20px 30px;
   font-size: $font-sm;
   background-color: $dark-blue;
   color: $secondary-blue;
   @include flex-it(column);
+  .policy-link {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .mockup-att {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint-md-screen) and (max-width: $breakpoint-lg-screen - 1) {
@@ -499,6 +517,7 @@ body {
   #about {
     .feature,
     .feature-2 {
+      margin-bottom: 0;
       .feature-icon {
         width: 96px;
         height: 96px;
