@@ -129,6 +129,10 @@ body {
   color: #fff;
 }
 
+#hero .section-mockup-content {
+  transform: translateY(20px);
+}
+
 #about {
   background-color: #caf0f8;
   border-bottom-left-radius: 200px;
