@@ -1,9 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
 @import "globals";
 @import "variables";
 @import "mixins";
 @import "animations";
+// sections
+@import "header";
+@import "hero";
+@import "about";
+@import "contact";
+@import "download";
+@import "partners";
+@import "footer";
+// pages
 @import "privacy";
 
 body {
@@ -15,93 +22,6 @@ body {
 
   .google-play-btn:hover {
     transform: translateY(-5px);
-  }
-}
-
-// Header - navigation
-.header {
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  transition: all 0.3s ease-in-out;
-
-  &.sticky {
-    padding: 15px 40px;
-    background-color: $primary-blue;
-    box-shadow: 0px 0px 8px 2px $dark-blue;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .branding {
-    @include flex-it(row);
-    text-decoration: none;
-    padding-left: 30px;
-  }
-
-  .branding .nav-logo-text {
-    font-size: $font-md;
-    color: $secondary-blue;
-    padding-left: 10px;
-    transition: all 0.4s ease-in-out;
-    &:hover {
-      transform: scale(0.9);
-    }
-  }
-
-  .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .nav-links {
-      width: 70vw;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      li {
-        list-style-type: none;
-        transition: all 0.3s ease-in-out;
-        .nav-link {
-          text-decoration: none;
-          font-size: $font-md;
-          font-weight: 400;
-          color: #fff;
-        }
-        &:hover {
-          transform: scale(0.9);
-        }
-      }
-    }
-  }
-}
-
-// Hero section
-#hero {
-  height: 90vh;
-  width: 100vw;
-  position: relative;
-  background-color: $primary-blue;
-  border-bottom-right-radius: 200px;
-  transform-style: preserve-3d;
-  @include flex-it(row);
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url("/images/bg-bin.jpg") center/cover no-repeat;
-    mix-blend-mode: hard-light;
-    opacity: 0.2;
-    border-bottom-right-radius: 200px;
-  }
-  .desc {
-    color: #fff;
   }
 }
 
@@ -153,175 +73,6 @@ body {
   background: #fff;
   border: 10px solid #000;
   border-radius: 20px;
-}
-
-// About section
-#about {
-  z-index: 3;
-  scroll-margin-top: 200px;
-  height: fit-content;
-  background-color: $secondary-blue;
-  border-bottom-left-radius: 200px;
-  .feature,
-  .feature-2 {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 10vw;
-    margin: 0 auto;
-    height: 45vh;
-    margin-top: 50px;
-    margin-bottom: 200px;
-
-    .feature-icon {
-      display: none;
-    }
-
-    .section-mockup-content {
-      position: relative;
-      top: -100px;
-      z-index: 10;
-    }
-    .section-text-content {
-      width: auto;
-      display: flex;
-      justify-content: center;
-      .name {
-        font-size: $font-xlg;
-        font-weight: 600;
-        color: $primary-blue;
-      }
-    }
-  }
-}
-
-// Download section
-#download {
-  scroll-margin-top: 80px;
-  height: fit-content;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  background-color: $primary-blue;
-  @include flex-it(column);
-  .download-heading {
-    font-size: $font-xlg;
-    font-weight: 600;
-    color: $dark-blue;
-  }
-  .info {
-    font-size: $font-md;
-    font-weight: 300;
-    color: $dark-blue;
-    padding-bottom: 20px;
-  }
-}
-
-// Contact section
-#contact {
-  background-color: $primary-blue;
-  background-size: cover;
-  width: 100vw;
-  height: fit-content;
-  padding: 40px 0;
-
-  .contact-heading {
-    text-align: center;
-    color: $dark-blue;
-    font-weight: 600;
-    font-size: $font-lg;
-  }
-
-  .contact-form {
-    max-width: 600px;
-    margin: auto;
-    padding: 0 10px;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .contact-form-text {
-    font-family: "Poppins", sans-serif;
-    font-size: $font-sm;
-    width: 100%;
-    margin: 16px 0;
-    border: 0;
-    background: transparent;
-    border: 3px solid $dark-blue;
-    border-radius: 12px;
-    padding: 20px 40px;
-    outline: none;
-    color: #111;
-    transition: 0.5s;
-    &:focus {
-      background: #0085cc;
-      box-shadow: 0 0 12px 1px $dark-blue;
-    }
-    &::placeholder {
-      color: $dark-blue;
-    }
-  }
-
-  textarea.contact-form-text {
-    resize: none;
-    height: 160px;
-  }
-
-  .contact-form-btn {
-    font-family: "Poppins", sans-serif;
-    border: 0;
-    font-size: $font-md;
-    background: $secondary-blue;
-    color: #111;
-    padding: 12px 50px;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: 0.5s;
-    outline: none;
-    &:hover {
-      background: #00b4d8;
-    }
-  }
-}
-
-// partners section
-#partners {
-  padding-top: 50px;
-  text-align: center;
-  .logos {
-    margin: 20px 0;
-    @include flex-it(row);
-    img {
-      margin: 0 20px;
-    }
-  }
-  .partners-heading {
-    font-size: $font-lg;
-    font-weight: 600;
-    color: $dark-blue;
-  }
-}
-
-// footer
-.footer {
-  padding: 20px 30px;
-  font-size: $font-sm;
-  background-color: $dark-blue;
-  color: $secondary-blue;
-  @include flex-it(column);
-  .policy-link {
-    text-decoration: none;
-    color: #fff;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  .mockup-att {
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 @media screen and (min-width: $breakpoint-md-screen) and (max-width: $breakpoint-lg-screen - 1) {
@@ -376,16 +127,9 @@ body {
     }
   }
   #about {
-    scroll-margin-top: 20px;
     .feature,
     .feature-2 {
-      display: flex;
-      justify-content: space-evenly;
-      padding: 0 10vw;
-      margin: 0 auto;
-      // height: 45vh;
-      margin-top: 50px;
-      margin-bottom: 50px;
+      height: fit-content;
     }
   }
   #download {
@@ -482,8 +226,6 @@ body {
 }
 
 @media screen and (max-width: $breakpoint-sm-screen - 1) {
-  // TODO MOBILE DESIGN, ESPECIALLY ICONS IN ABOUT SECTION
-
   #hero {
     height: 100vh;
     width: 100vw;
@@ -517,6 +259,7 @@ body {
   #about {
     .feature,
     .feature-2 {
+      height: fit-content;
       margin-bottom: 0;
       .feature-icon {
         width: 96px;
@@ -544,7 +287,6 @@ body {
   }
 
   #contact {
-    scroll-margin-top: 40px;
     .contact-form-text {
       margin: 8px 0;
       padding: 12px 26px;

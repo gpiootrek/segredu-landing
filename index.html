@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <!-- TODO ADD SITE ICON TO DISPLAY ON TAB,
-              ORGANIZE CODE,
-              CHECK IF EVERYTHING IS WRITTEN CORRETCLY -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="Description"
+      name="description"
       content="Segredu - aplikacja, z którą segregowanie stanie się łatwiejsze, a o odbiorze odpadów nie zapomnisz już nigdy!"
     />
-    <meta name="theme-color" content="#0077b6">
+    <meta name="theme-color" content="#0077b6" />
     <title>Segredu</title>
+    <link rel="icon" href="/images/logo.png">
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -53,6 +51,7 @@
             <a
               href="https://play.google.com/store/apps/details?id=com.relit.segredu"
               class="google-play-btn"
+              target="_blank"
             >
               <img
                 src="/images/google-play.png"
@@ -82,13 +81,11 @@
           <div class="section-text-content">
             <h2 class="name">Skaner</h2>
             <p class="desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-              cumque atque ratione hic, nostrum quaerat!
+              Skanuj kody kreskowe z opakowań produktów, aby dowiedzieć się, do jakiego kosza należy je wyrzucić.
             </p>
           </div>
         </div>
         <div class="feature-2 search">
-          <!-- TODO search icon instead of this one -->
           <img
             src="/images/func-icons/szukaj.png"
             alt="Ikona szukania"
@@ -99,8 +96,7 @@
           <div class="section-text-content">
             <h2 class="name">Wyszukiwarka</h2>
             <p class="desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-              cumque atque ratione hic, nostrum quaerat!
+              Produkty można znaleźć także przez nazwę. Wystarczy zacząć wpisywać ją na ekranie wyszukiwania. 
             </p>
           </div>
           <div class="section-mockup-content"></div>
@@ -117,8 +113,7 @@
           <div class="section-text-content">
             <h2 class="name">Harmonogram</h2>
             <p class="desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-              cumque atque ratione hic, nostrum quaerat!
+              Na ekranie harmonogramu daty odbioru odpadów w wybranej lokalizacji są zaznaczone odpowiedającymi im kolorami, a poniżej wypisane są najbliższe z nich. 
             </p>
           </div>
         </div>
@@ -133,8 +128,7 @@
           <div class="section-text-content">
             <h2 class="name">Lista punktów</h2>
             <p class="desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-              cumque atque ratione hic, nostrum quaerat!
+              Miejsca, gdzie można wyrzucić odpady takie jak leki, zużyte baterie, sprzęt AGD czy odpady wielkogabarytowe wypisane są na liście, a także zaznaczone na mapie.
             </p>
           </div>
           <div class="section-mockup-content"></div>
@@ -147,6 +141,7 @@
         <a
           href="https://play.google.com/store/apps/details?id=com.relit.segredu"
           class="google-play-btn"
+          target="_blank"
         >
           <img
             src="/images/google-play.png"
@@ -155,9 +150,8 @@
             alt="Google play logo - pobierz z google play"
         /></a>
         <p class="info">Zobacz, jak zacząć korzystać z naszej aplikacji.</p>
-        <!-- TODO CHANGE VIDEO WHEN OURS IS DONE
-                  CHECK IF SELF-MADE VIDEO PLAYER
-                  IS BETTER AND FASTER -->
+        <!-- TODO CHECK IF SELF-MADE VIDEO PLAYER
+                  IS BETTER AND FASTER THAN YT -->
         <iframe
           class="video"
           width="1024"
@@ -173,7 +167,13 @@
       <!-- CONTACT SECTION -->
       <section id="contact">
         <h2 class="contact-heading">Skontaktuj się z nami</h2>
-        <form name="contact" class="contact-form" method="POST" data-netlify="true">
+        <form
+          name="contact"
+          class="contact-form"
+          method="POST"
+          action="index.html/#contact"
+          data-netlify="true"
+        >
           <input
             type="email"
             name="email"
@@ -215,8 +215,16 @@
       <a href="/privacy-policy.html" class="policy-link"
         >Polityka prywatności</a
       >
-      <a href="https://www.freepik.com/vectors/mockup" class="mockup-att">Mockup vector created by upklyak - www.freepik.com</a>
+      <!-- <a href="https://www.freepik.com/vectors/mockup" class="mockup-att"
+        >Mockup vector created by upklyak - www.freepik.com</a
+      > -->
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="/js/navbar.js"></script>
+    <script src="/js/scroll.js"></script>
   </body>
 </html>
