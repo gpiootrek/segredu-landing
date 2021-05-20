@@ -625,6 +625,9 @@ body .google-play-btn:hover {
 }
 
 @media screen and (max-height: 900px) {
+  #hero {
+    height: 90vh;
+  }
   #hero .section-mockup-content {
     transform: translateY(60px);
   }
