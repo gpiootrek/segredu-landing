@@ -257,6 +257,10 @@ body {
   padding-bottom: 20px;
 }
 
+#download .video {
+  min-height: 360px;
+}
+
 #partners {
   padding-top: 50px;
   text-align: center;
