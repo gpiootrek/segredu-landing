@@ -68,6 +68,7 @@ body {
 
 .section-mockup-content {
   transform: translateZ(10px);
+  z-index: 99;
   width: 360px;
   height: 640px;
   background: #fff;

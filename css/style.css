@@ -29,6 +29,8 @@ body {
 }
 
 .header {
+  transform-style: preserve-3d;
+  transform: translateZ(11px);
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -41,6 +43,8 @@ body {
 }
 
 .header.sticky {
+  transform-style: preserve-3d;
+  transform: translateZ(11px);
   padding: 15px 40px;
   background-color: #0077b6;
   box-shadow: 0px 0px 8px 2px #03045e;
@@ -68,6 +72,8 @@ body {
 }
 
 .header .nav {
+  transform-style: preserve-3d;
+  transform: translateZ(11px);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -389,6 +395,7 @@ body .google-play-btn:hover {
 
 .section-mockup-content {
   transform: translateZ(10px);
+  z-index: 99;
   width: 360px;
   height: 640px;
   background: #fff;
