@@ -129,10 +129,6 @@ body {
   color: #fff;
 }
 
-#hero .section-mockup-content {
-  transform: translateY(20px);
-}
-
 #about {
   background-color: #caf0f8;
   border-bottom-left-radius: 200px;
@@ -626,5 +622,11 @@ body .google-play-btn:hover {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-9px, -10px);
+}
+
+@media screen and (max-height: 900px) {
+  #hero .section-mockup-content {
+    transform: translateY(60px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

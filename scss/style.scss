@@ -331,3 +331,12 @@ body {
     transform: rotate(45deg) translate(-9px, -10px);
   }
 }
+
+// mac
+@media screen and (max-height: 900px) {
+  #hero {
+    .section-mockup-content {
+      transform: translateY(60px);
+    }
+  }
+}
