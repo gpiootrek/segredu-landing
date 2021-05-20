@@ -1,0 +1,23 @@
+
+.footer {
+    padding: 20px 30px;
+    font-size: $font-sm;
+    background-color: $dark-blue;
+    color: $secondary-blue;
+    @include flex-it(column);
+    .policy-link {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .mockup-att {
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }

@@ -1,0 +1,18 @@
+#download {
+  width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  background-color: $primary-blue;
+  @include flex-it(column);
+  .download-heading {
+    font-size: $font-xlg;
+    font-weight: 600;
+    color: $dark-blue;
+  }
+  .info {
+    font-size: $font-md;
+    font-weight: 300;
+    color: $dark-blue;
+    padding-bottom: 20px;
+  }
+}

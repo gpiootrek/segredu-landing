@@ -4,8 +4,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -18,124 +17,41 @@ body {
   overflow-x: hidden;
 }
 
-@-webkit-keyframes navFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
 @keyframes navFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
-}
-
-#privacy-policy {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff;
-  margin: 0 auto;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow-x: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#privacy-policy .h1 {
-  width: 100%;
-  font-size: 3rem;
-}
-
-#privacy-policy .content {
-  width: 100%;
-  font-size: 1.375rem;
-  padding: 0 10vw;
-}
-
-body {
-  background-color: #caf0f8;
-}
-
-body .google-play-btn {
-  margin-left: -10px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-body .google-play-btn:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
 }
 
 .header {
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 20px 20px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .header.sticky {
   padding: 15px 40px;
   background-color: #0077b6;
-  -webkit-box-shadow: 0px 0px 8px 2px #03045e;
-          box-shadow: 0px 0px 8px 2px #03045e;
-  -webkit-transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 8px 2px #03045e;
   transition: all 0.3s ease-in-out;
 }
 
 .header .branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   text-decoration: none;
   padding-left: 30px;
 }
@@ -144,77 +60,50 @@ body .google-play-btn:hover {
   font-size: 2rem;
   color: #caf0f8;
   padding-left: 10px;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .header .branding .nav-logo-text:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .header .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .header .nav .nav-links {
   width: 70vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
 }
 
 .header .nav .nav-links li {
   list-style-type: none;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .header .nav .nav-links li .nav-link {
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 400;
   color: #fff;
 }
 
 .header .nav .nav-links li:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 #hero {
   height: 90vh;
   width: 100vw;
-  position: relative;
   background-color: #0077b6;
   border-bottom-right-radius: 200px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform-style: preserve-3d;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 #hero::after {
@@ -234,88 +123,15 @@ body .google-play-btn:hover {
   color: #fff;
 }
 
-.section-text-content {
-  -webkit-transform: translateZ(2px);
-          transform: translateZ(2px);
-  width: 40vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.section-text-content .h1 {
-  font-size: 5rem;
-  font-weight: 600;
-  color: #90e0ef;
-}
-
-.section-text-content .desc {
-  font-size: 2rem;
-  width: 460px;
-  color: #03045e;
-}
-
-.section-text-content .btn-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.section-text-content .btn-area .check-btn {
-  width: 180px;
-  height: 60px;
-  border-radius: 12px;
-  background-color: #03045e;
-  color: #caf0f8;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.375rem;
-  padding-top: 12px;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-.section-text-content .btn-area .check-btn:hover {
-  word-spacing: 10px;
-}
-
-.section-mockup-content {
-  -webkit-transform: translateZ(10px);
-          transform: translateZ(10px);
-  width: 360px;
-  height: 640px;
-  background: #fff;
-  border: 10px solid #000;
-  border-radius: 20px;
-}
-
 #about {
-  z-index: 3;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   background-color: #caf0f8;
   border-bottom-left-radius: 200px;
 }
 
 #about .feature,
 #about .feature-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   padding: 0 10vw;
   margin: 0 auto;
   height: 45vh;
@@ -332,18 +148,13 @@ body .google-play-btn:hover {
 #about .feature-2 .section-mockup-content {
   position: relative;
   top: -100px;
-  z-index: 10;
 }
 
 #about .feature .section-text-content,
 #about .feature-2 .section-text-content {
   width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 #about .feature .section-text-content .name,
@@ -353,48 +164,9 @@ body .google-play-btn:hover {
   color: #0077b6;
 }
 
-#download {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  background-color: #0077b6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#download .download-heading {
-  font-size: 4rem;
-  font-weight: 600;
-  color: #03045e;
-}
-
-#download .info {
-  font-size: 2rem;
-  font-weight: 300;
-  color: #03045e;
-  padding-bottom: 20px;
-}
-
 #contact {
   background-color: #0077b6;
-  background-size: cover;
   width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   padding: 40px 0;
 }
 
@@ -409,7 +181,6 @@ body .google-play-btn:hover {
   max-width: 600px;
   margin: auto;
   padding: 0 10px;
-  overflow: hidden;
   text-align: center;
 }
 
@@ -418,33 +189,18 @@ body .google-play-btn:hover {
   font-size: 1.375rem;
   width: 100%;
   margin: 16px 0;
-  border: 0;
   background: transparent;
   border: 3px solid #03045e;
   border-radius: 12px;
   padding: 20px 40px;
   outline: none;
   color: #111;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 #contact .contact-form-text:focus {
   background: #0085cc;
-  -webkit-box-shadow: 0 0 12px 1px #03045e;
-          box-shadow: 0 0 12px 1px #03045e;
-}
-
-#contact .contact-form-text::-webkit-input-placeholder {
-  color: #03045e;
-}
-
-#contact .contact-form-text:-ms-input-placeholder {
-  color: #03045e;
-}
-
-#contact .contact-form-text::-ms-input-placeholder {
-  color: #03045e;
+  box-shadow: 0 0 12px 1px #03045e;
 }
 
 #contact .contact-form-text::placeholder {
@@ -465,13 +221,36 @@ body .google-play-btn:hover {
   padding: 12px 50px;
   border-radius: 40px;
   cursor: pointer;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
 }
 
 #contact .contact-form-btn:hover {
   background: #00b4d8;
+}
+
+#download {
+  width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  background-color: #0077b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#download .download-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #03045e;
+}
+
+#download .info {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #03045e;
+  padding-bottom: 20px;
 }
 
 #partners {
@@ -481,19 +260,10 @@ body .google-play-btn:hover {
 
 #partners .logos {
   margin: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 #partners .logos img {
@@ -511,19 +281,10 @@ body .google-play-btn:hover {
   font-size: 1.375rem;
   background-color: #03045e;
   color: #caf0f8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer .policy-link {
@@ -543,6 +304,96 @@ body .google-play-btn:hover {
 
 .footer .mockup-att:hover {
   text-decoration: underline;
+}
+
+#privacy-policy {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#privacy-policy .h1 {
+  width: 100%;
+  font-size: 3rem;
+}
+
+#privacy-policy .content {
+  width: 100%;
+  font-size: 1.375rem;
+  padding: 0 10vw;
+}
+
+body {
+  background-color: #caf0f8;
+}
+
+body .google-play-btn {
+  margin-left: -10px;
+  transition: all 0.3s ease-in-out;
+}
+
+body .google-play-btn:hover {
+  transform: translateY(-5px);
+}
+
+.section-text-content {
+  transform: translateZ(2px);
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-text-content .h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #90e0ef;
+}
+
+.section-text-content .desc {
+  font-size: 2rem;
+  width: 460px;
+  color: #03045e;
+}
+
+.section-text-content .btn-area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.section-text-content .btn-area .check-btn {
+  width: 180px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #03045e;
+  color: #caf0f8;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.375rem;
+  padding-top: 12px;
+  transform: translateY(-3px);
+}
+
+.section-text-content .btn-area .check-btn:hover {
+  word-spacing: 10px;
+}
+
+.section-mockup-content {
+  transform: translateZ(10px);
+  width: 360px;
+  height: 640px;
+  background: #fff;
+  border: 10px solid #000;
+  border-radius: 20px;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -586,22 +437,11 @@ body .google-play-btn:hover {
     margin: 0 auto;
   }
   .section-text-content .btn-area {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #about .feature,
   #about .feature-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    padding: 0 10vw;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: fit-content;
   }
   #download .video {
     width: 720px;
@@ -634,28 +474,13 @@ body .google-play-btn:hover {
     width: 60vw;
     top: 0;
     background-color: #0077b6;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.4s ease-out;
-    transition: -webkit-transform 0.4s ease-out;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: translateX(100%);
     transition: transform 0.4s ease-out;
-    transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
   }
   .header .nav .nav-links li {
     opacity: 0;
@@ -665,22 +490,18 @@ body .google-play-btn:hover {
   }
   .header .nav .active-close {
     z-index: -10;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: translateZ(-1px);
-            transform: translateZ(-1px);
+    transform-style: preserve-3d;
+    transform: translateZ(-1px);
     position: absolute;
     left: 0;
     top: 0;
     width: 40vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
   }
   .header .nav .active-hamburger {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   .header .nav .hamburger-menu {
     z-index: 5;
@@ -692,21 +513,13 @@ body .google-play-btn:hover {
     height: 4px;
     background-color: #fff;
     margin: 10px;
-    -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
   #about .feature,
   #about .feature-2 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
   #about .feature .feature-icon,
   #about .feature-2 .feature-icon {
@@ -740,12 +553,11 @@ body .google-play-btn:hover {
     margin: 0 auto;
   }
   .section-text-content .btn-area {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #about .feature,
   #about .feature-2 {
+    height: fit-content;
     margin-bottom: 0;
   }
   #about .feature .feature-icon,
@@ -773,8 +585,7 @@ body .google-play-btn:hover {
     padding: 12px 26px;
   }
   #contact .contact-form-text:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   #contact textarea.contact-form-text {
     height: 20vh;
@@ -795,8 +606,7 @@ body .google-play-btn:hover {
 }
 
 .toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 10px);
-          transform: rotate(-45deg) translate(-9px, 10px);
+  transform: rotate(-45deg) translate(-9px, 10px);
 }
 
 .toggle .line2 {
@@ -804,7 +614,6 @@ body .google-play-btn:hover {
 }
 
 .toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-9px, -10px);
-          transform: rotate(45deg) translate(-9px, -10px);
+  transform: rotate(45deg) translate(-9px, -10px);
 }
 /*# sourceMappingURL=style.css.map */

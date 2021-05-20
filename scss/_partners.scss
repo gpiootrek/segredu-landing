@@ -1,0 +1,16 @@
+#partners {
+  padding-top: 50px;
+  text-align: center;
+  .logos {
+    margin: 20px 0;
+    @include flex-it(row);
+    img {
+      margin: 0 20px;
+    }
+  }
+  .partners-heading {
+    font-size: $font-lg;
+    font-weight: 600;
+    color: $dark-blue;
+  }
+}

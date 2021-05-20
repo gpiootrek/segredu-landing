@@ -1,0 +1,35 @@
+#about {
+    background-color: $secondary-blue;
+    border-bottom-left-radius: 200px;
+    .feature,
+    .feature-2 {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 10vw;
+      margin: 0 auto;
+      height: 45vh;
+      margin-top: 50px;
+      margin-bottom: 200px;
+  
+      .feature-icon {
+        display: none;
+      }
+  
+      .section-mockup-content {
+        position: relative;
+        top: -100px;
+      }
+
+      .section-text-content {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        .name {
+          font-size: $font-xlg;
+          font-weight: 600;
+          color: $primary-blue;
+        }
+      }
+    }
+  }
+  

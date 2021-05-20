@@ -3,6 +3,7 @@ const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links li");
 const scrollToTop = document.querySelector(".to-top");
 const burgerCloseArea = document.querySelector(".burger-close");
+
 const app = () => {
   stickyNav();
   hamburgerNav();
@@ -51,4 +52,5 @@ function closeHamburger() {
   burgerCloseArea.classList.remove("active-close");
   navLinks.forEach((link) => (link.style.animation = ""));
 }
+
 app();
