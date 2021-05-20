@@ -486,7 +486,7 @@ body .google-play-btn:hover {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    transform: translateX(100%);
+    transform: translateX(150%);
     transition: transform 0.4s ease-out;
   }
   .header .nav .nav-links li {

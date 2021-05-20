@@ -172,7 +172,7 @@ body {
         @include flex-it(column);
         justify-content: space-evenly;
         // Take menu off the screen
-        transform: translateX(100%);
+        transform: translateX(150%);
         transition: transform 0.4s ease-out;
         li {
           opacity: 0;
