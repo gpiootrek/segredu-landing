@@ -1,58 +1,58 @@
 .header {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  transform: translateZ(11px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+
+  &.sticky {
+    padding: 15px 40px;
+    background-color: $primary-blue;
+    box-shadow: 0px 0px 8px 2px $dark-blue;
     transition: all 0.3s ease-in-out;
-  
-    &.sticky {
-      padding: 15px 40px;
-      background-color: $primary-blue;
-      box-shadow: 0px 0px 8px 2px $dark-blue;
-      transition: all 0.3s ease-in-out;
+  }
+
+  .branding {
+    @include flex-it(row);
+    text-decoration: none;
+    padding-left: 30px;
+  }
+
+  .branding .nav-logo-text {
+    font-size: $font-md;
+    color: $secondary-blue;
+    padding-left: 10px;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      transform: scale(0.9);
     }
-  
-    .branding {
-      @include flex-it(row);
-      text-decoration: none;
-      padding-left: 30px;
-    }
-  
-    .branding .nav-logo-text {
-      font-size: $font-md;
-      color: $secondary-blue;
-      padding-left: 10px;
-      transition: all 0.4s ease-in-out;
-      &:hover {
-        transform: scale(0.9);
-      }
-    }
-  
-    .nav {
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .nav-links {
+      width: 70vw;
       display: flex;
       justify-content: space-around;
-      align-items: center;
-      .nav-links {
-        width: 70vw;
-        display: flex;
-        justify-content: space-around;
-        li {
-          list-style-type: none;
-          transition: all 0.3s ease-in-out;
-          .nav-link {
-            text-decoration: none;
-            font-size: $font-md;
-            color: #fff;
-          }
-          &:hover {
-            transform: scale(0.9);
-          }
+      li {
+        list-style-type: none;
+        transition: all 0.3s ease-in-out;
+        .nav-link {
+          text-decoration: none;
+          font-size: $font-md;
+          color: #fff;
+        }
+        &:hover {
+          transform: scale(0.9);
         }
       }
     }
   }
-  
+}
