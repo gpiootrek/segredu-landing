@@ -68,6 +68,7 @@ body {
 
 .section-mockup-content {
   transform: translateZ(10px);
+  z-index: 99;
   width: 360px;
   height: 640px;
   background: #fff;
@@ -212,6 +213,7 @@ body {
       }
     }
   }
+
   #about {
     .feature,
     .feature-2 {
@@ -328,5 +330,15 @@ body {
   }
   .line3 {
     transform: rotate(45deg) translate(-9px, -10px);
+  }
+}
+
+// mac
+@media screen and (max-height: 900px) {
+  #hero {
+    height: 95vh;
+    .section-mockup-content {
+      transform: translateY(60px);
+    }
   }
 }
