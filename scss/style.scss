@@ -15,14 +15,15 @@
 
 body {
   background-color: $secondary-blue;
-  .google-play-btn {
-    margin-left: -10px;
-    transition: all 0.3s ease-in-out;
-  }
+}
 
-  .google-play-btn:hover {
-    transform: translateY(-5px);
-  }
+.google-play-btn {
+  margin-left: -10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.google-play-btn:hover {
+  transform: translateY(-5px);
 }
 
 // text and mockup content divs
@@ -47,22 +48,6 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-
-    .check-btn {
-      width: 180px;
-      height: 60px;
-      border-radius: 12px;
-      background-color: $dark-blue;
-      color: $secondary-blue;
-      text-decoration: none;
-      text-align: center;
-      font-size: $font-sm;
-      padding-top: 12px;
-      transform: translateY(-3px);
-      &:hover {
-        word-spacing: 10px;
-      }
-    }
   }
 }
 
@@ -133,20 +118,18 @@ body {
       height: fit-content;
     }
   }
-  #download {
-    .video {
-      width: 720px;
-      height: 480px;
-    }
+  .video {
+    width: 720px;
+    height: 480px;
   }
   #partners {
     img {
       width: 100px;
       height: auto;
     }
-    .partners-heading {
-      font-size: $font-md;
-    }
+  }
+  .partners-heading {
+    font-size: $font-md;
   }
 }
 

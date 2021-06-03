@@ -4,18 +4,21 @@
   padding-bottom: 100px;
   background-color: $primary-blue;
   @include flex-it(column);
-  .download-heading {
-    font-size: $font-xlg;
-    font-weight: 600;
-    color: $dark-blue;
-  }
-  .info {
-    font-size: $font-md;
-    font-weight: 300;
-    color: $dark-blue;
-    padding-bottom: 20px;
-  }
-  .video {
-    min-height: 360px;
-  }
+}
+
+.download-heading {
+  font-size: $font-xlg;
+  font-weight: 600;
+  color: $dark-blue;
+}
+
+.info {
+  font-size: $font-md;
+  font-weight: 300;
+  color: $dark-blue;
+  padding-bottom: 20px;
+}
+
+.video {
+  min-height: 360px;
 }
