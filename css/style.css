@@ -146,6 +146,12 @@ body {
   height: 45vh;
   margin-top: 50px;
   margin-bottom: 200px;
+  transition: all .6s ease-in;
+}
+
+.feature-hidden {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .feature-icon {
