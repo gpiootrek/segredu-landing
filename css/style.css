@@ -385,9 +385,6 @@ body {
   z-index: 99;
   width: 360px;
   height: 640px;
-  background: #fff;
-  border: 10px solid #000;
-  border-radius: 20px;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {

@@ -56,9 +56,6 @@ body {
   z-index: 99;
   width: 360px;
   height: 640px;
-  background: #fff;
-  border: 10px solid #000;
-  border-radius: 20px;
 }
 
 @media screen and (min-width: $breakpoint-md-screen) and (max-width: $breakpoint-lg-screen - 1) {
