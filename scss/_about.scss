@@ -4,6 +4,9 @@
   .section-mockup-content {
     position: relative;
     top: -100px;
+    img {
+      transition: all 1.5s ease-in;
+    }
   }
 }
 
@@ -37,4 +40,8 @@
     font-weight: 600;
     color: $primary-blue;
   }
+}
+
+.img-lazy {
+  filter: blur(14px);
 }

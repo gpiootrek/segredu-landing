@@ -137,6 +137,10 @@ body {
   top: -100px;
 }
 
+#about .section-mockup-content img {
+  transition: all 1.5s ease-in;
+}
+
 .feature,
 .feature-2 {
   display: flex;
@@ -168,6 +172,10 @@ body {
   font-size: 4rem;
   font-weight: 600;
   color: #0077b6;
+}
+
+.img-lazy {
+  filter: blur(14px);
 }
 
 #contact {
@@ -233,6 +241,13 @@ textarea.contact-form-text {
 
 .contact-form-btn:hover {
   background: #00b4d8;
+}
+
+.mail-info {
+  text-align: center;
+  font-size: 1.375rem;
+  color: #03045e;
+  margin: 20px auto;
 }
 
 #download {
@@ -306,14 +321,8 @@ textarea.contact-form-text {
   text-decoration: underline;
 }
 
-.footer .mockup-att {
-  font-size: 1rem;
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer .mockup-att:hover {
-  text-decoration: underline;
+.footer .mail-info {
+  color: #90e0ef;
 }
 
 #privacy-policy {
