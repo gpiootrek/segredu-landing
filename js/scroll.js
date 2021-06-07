@@ -27,21 +27,25 @@ const allFeatures = [
   ...document.querySelectorAll(".feature"),
   ...document.querySelectorAll(".feature-2"),
 ];
+const imgTargets = document.querySelectorAll("img[data-src]");
 
 const revealFeature = function (entries, observer) {
-    const [entry] = entries;
+  const [entry] = entries;
 
-    if(!entry.isIntersecting) return;
-    entry.target.classList.remove('feature-hidden');
-    observer.unobserve(entry.target);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("feature-hidden");
+  observer.unobserve(entry.target);
 };
 
 const featuresObserver = new IntersectionObserver(revealFeature, {
-    root: null,
-    threshold: 0.2
+  root: null,
+  threshold: 0.2,
 });
 
 allFeatures.forEach((feature) => {
-    featuresObserver.observe(feature);
-    feature.classList.add('feature-hidden');
+  featuresObserver.observe(feature);
+  feature.classList.add("feature-hidden");
+  const img = [...feature.children].find(el => el.classList.contains('section-mockup-content'));
+  img.children[0].classList.remove('img-lazy');
+  img.children[0].src = img.children[0].dataset.src;
 });
