@@ -194,15 +194,13 @@ body {
     }
   }
 
-  #about {
-    .feature,
-    .feature-2 {
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      .feature-icon {
-        display: block;
-      }
+  .feature,
+  .feature-2 {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .feature-icon {
+      display: block;
     }
   }
 }
@@ -238,55 +236,50 @@ body {
     }
   }
 
-  #about {
-    .feature,
-    .feature-2 {
-      height: fit-content;
-      margin-bottom: 0;
-      .feature-icon {
-        width: 96px;
-        height: 96px;
-      }
-      .section-text-content {
-        .name {
-          font-size: $font-md;
-        }
+  .feature,
+  .feature-2 {
+    height: fit-content;
+    margin-bottom: 0;
+    .feature-icon {
+      width: 96px;
+      height: 96px;
+    }
+    .section-text-content {
+      .name {
+        font-size: $font-md;
       }
     }
   }
-  #download {
-    .download-heading {
-      font-size: $font-md;
-    }
-    .info {
-      font-size: $font-sm;
-      text-align: center;
-    }
-    .video {
-      width: 100vw;
-      height: auto;
+
+  .download-heading {
+    font-size: $font-md;
+  }
+  .info {
+    font-size: $font-sm;
+    text-align: center;
+  }
+  .video {
+    width: 100vw;
+    height: auto;
+  }
+
+  .contact-form-text {
+    margin: 8px 0;
+    padding: 12px 26px;
+    &:focus {
+      box-shadow: none;
     }
   }
 
-  #contact {
-    .contact-form-text {
-      margin: 8px 0;
-      padding: 12px 26px;
-      &:focus {
-        box-shadow: none;
-      }
-    }
+  textarea.contact-form-text {
+    height: 20vh;
+  }
 
-    textarea.contact-form-text {
-      height: 20vh;
-    }
-
-    .contact-form-btn {
-      font-size: $font-sm;
-      font-weight: 600;
-      padding: 12px 30px;
-      border-radius: 40px;
-    }
+  .contact-form-btn {
+    font-size: $font-sm;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 40px;
   }
 
   #partners {
@@ -297,6 +290,10 @@ body {
     .partners-heading {
       font-size: $font-md;
     }
+  }
+
+  .mail-info {
+    font-size: 1.125rem;
   }
   // eo mobile breakpoint
 }
