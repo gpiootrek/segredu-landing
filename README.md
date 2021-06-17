@@ -1,3 +1,3 @@
 # segredu-landing
 Landing page of Segredu.
-segredu.pl | segredu.com
+http://segredu.pl | http://segredu.com
